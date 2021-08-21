@@ -9,10 +9,10 @@ import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
-// NEED TO ADD
+// ---
 import com.ctre.phoenix.motorcontrol.can.*;
 import com.ctre.phoenix.motorcontrol.ControlMode;
-// NEED TO ADD
+// ---
 
 /**
  * The VM is configured to automatically run this class, and to call the functions corresponding to
@@ -25,11 +25,11 @@ public class Robot extends TimedRobot {
   private static final String kCustomAuto = "My Auto";
   private String m_autoSelected;
   private final SendableChooser<String> m_chooser = new SendableChooser<>();
-  // NEED TO ADD
+  // ---
   private WPI_VictorSPX m_motor = new WPI_VictorSPX(8); 
 
   private Joystick m_joystick = new Joystick(0);
-  // NEED TO ADD
+  // ---
 
   /**
    * This function is run when the robot is first started up and should be used for any
@@ -90,7 +90,7 @@ public class Robot extends TimedRobot {
   /** This function is called periodically during operator control. */
   @Override
   public void teleopPeriodic() {
-// NEED TO ADD
+// ---
     double Y = m_joystick.getY();
 
     if (Y > 0.3) {
@@ -102,7 +102,7 @@ public class Robot extends TimedRobot {
     }
 
   }
-// NEED TO ADD
+// ---
   /** This function is called once when the robot is disabled. */
   @Override
   public void disabledInit() {}
